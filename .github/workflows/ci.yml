@@ -27,5 +27,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_build/html
-          destination_dir: feature-branch3
+          destination_dir: feature-branch4/
           # keep_files: true
