@@ -18,13 +18,14 @@ jobs:
         run: pip install -r requirements.txt
       - name: Build
         run: make html
-      - name: Copy
-        run: |
-          mkdir -p ./public/feature-branch
-          cp -rT ./_build/html ./public/feature-branch
+      #- name: Copy
+      #  run: |
+      #    mkdir -p ./public/feature-branch
+      #    cp -rT ./_build/html ./public/feature-branch
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          publish_dir: ./_buid/html
+          destination_dir: feature-branch
           keep_files: true
