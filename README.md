@@ -1,2 +1,2 @@
 # pages
-sample
+GitHub pages sample
